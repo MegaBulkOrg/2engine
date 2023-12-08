@@ -1,0 +1,29 @@
+// Цвета
+$dark-color: #111111;
+$primary-black-color: #171924;
+$yellow-color: #edb021;
+$white-color: #ffffff;
+$gray-color: #f7f7f7;
+$gray-color-2: #7f7f7f;
+
+// Брейпоинты для медиа-запросов
+$tablet: 1500px;
+$smallTab: 1000px;
+$mobile: 768px;
+
+// Общие стили
+.containerFluid {
+    max-width: 1920px;
+    padding-left: 175px;
+    padding-right: 175px;
+    margin: 0 auto;
+
+    @media (max-width:$tablet) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    @media (max-width:$smallTab) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

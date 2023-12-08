@@ -1,0 +1,189 @@
+@import '../../../global.scss';
+
+.header {
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background-color: $dark-color;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+
+        &Left {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        &Right {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__logo {
+        @media (max-width:$smallTab) {
+            display: none;
+        }
+    }
+
+    &__navList {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        @media (max-width:$tablet) {
+            gap: 0;
+        }
+    }
+
+    &__leftBtn {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        border: none;
+        background-color: transparent;
+        color: $white-color;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 22.4px;
+        cursor: pointer;
+
+        @media (max-width:$smallTab) {
+            display: none;
+        }
+    }
+
+    &__burgerMenuButton {
+        display: none;
+        cursor: pointer;
+    }
+
+    &__mobLogo {
+        display: none;
+
+        @media (max-width:$smallTab) {
+            position: relative;
+            display: block;
+            z-index: 4;
+        }
+    }
+
+    &__burgerMenuButton {
+        @media (max-width:$tablet) {
+            position: relative;
+            z-index: 4;
+            display: inline-block;
+            padding: 0;
+            user-select: none;
+            background: none;
+            border: none;
+        }
+    }
+
+    &__burgerMenuButton span {
+        @media (max-width:$tablet) {
+            display: block;
+            width: 21px;
+            height: 2px;
+            margin-bottom: 6px;
+            position: relative;
+            background-color: $white-color;
+            border-radius: 3px;
+            z-index: 2;
+            transform-origin: -1px 1px;
+            transition-property: transform, background, opacity;
+            transition-duration: .3s;
+            transition-timing-function: ease;
+        }
+    }
+
+    &__nav {
+        @media (max-width:$tablet) {
+            position: absolute;
+            z-index: 3;
+            right: 100%;
+            top: 0;
+            margin: 0;
+            padding: 80px 50px 50px 50px;
+            width: 100%;
+            background: $dark-color;
+            list-style-type: none;
+            transform-origin: 0% 0%;
+            transform: translateX(0);
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        }
+
+        &List {
+            @media (max-width:$tablet) {
+                flex-direction: column;
+            }
+            &Item {                
+                &Link {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                    color: $white-color;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 22.4px;
+                }
+                @media (max-width:$tablet) {
+                    text-align: center;
+                }
+            }
+            &Item:not(:last-child) {
+                @media (max-width:$tablet) {
+                    margin-right: 0;
+                }
+            }
+            &Item:not(:last-child) {
+                @media (max-width:$tablet) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    &__mobileMenuOpen {
+        @media (max-width:$tablet) {
+            transform: translateX(100%);
+        }
+    }
+}
+
+.catalogBtn {
+    padding: 16px 20px;
+    border-radius: 10px;
+    background-color: $yellow-color;
+    color: $primary-black-color;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19.6px;
+}
+
+.burgerMenuOpen span:nth-child(1) {
+    @media (max-width:$tablet) {
+        opacity: 1;
+        transform: rotate(45deg) translate(-1px, -1px);
+        background-color: $white-color;
+    }
+}
+
+.burgerMenuOpen span:nth-child(2) {
+    @media (max-width:$tablet) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+}
+
+.burgerMenuOpen span:nth-child(3) {
+    @media (max-width:$tablet) {
+        transform: rotate(-45deg) translate(0, -1px);
+        background-color: $white-color;
+    }
+}

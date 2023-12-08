@@ -1,0 +1,290 @@
+@import '../../../global.scss';
+
+.capabilities {
+    padding: 80px 0;
+
+    @media (max-width:$tablet) {
+        padding-top: 60px;
+    }
+
+    @media (max-width:$mobile) {
+        padding-top: 40px;
+    }
+
+    &__title {
+        margin-bottom: 80px;
+        color: $primary-black-color;
+        text-align: center;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 55px;
+
+        @media (max-width:$tablet) {
+            margin-bottom: 60px;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 36.4px
+        }
+        @media (max-width:$mobile) {
+            margin-bottom: 40px;
+            font-size: 26px;
+        }
+    }
+    &__infoContainer {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        @media (max-width:$smallTab) {
+            flex-direction: column;
+        }
+    }
+    &__infoLeft, &__infoRight {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        @media (max-width:$smallTab) {
+            gap: 20px;
+        }
+    }
+    &__colTitle {
+        text-align: center;
+        color: $yellow-color;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 50.4px;
+
+        @media (max-width:$tablet) {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 30.8px;
+        }
+        @media (max-width:$mobile) {
+            font-size: 22px;
+        }
+    }
+    
+    &__infoBox {
+        padding: 24px 40px;
+        border-radius: 20px;
+        background-color: $gray-color;
+        
+        @media (max-width:$smallTab) {
+            padding: 20px;
+        }
+        
+        &Title {
+            margin-top: 0;
+            margin-bottom: 24px;
+            color: $primary-black-color;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 42px;
+
+            @media (max-width:$smallTab) {
+                font-size: 22px;
+                font-weight: 600;
+                line-height: 30.8px;
+            }
+        }
+        &Content {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: "first second third" "fourth fifth fifth";
+            color: $gray-color-2;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 30.8px;
+
+            @media (max-width:$smallTab) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-areas: "first second" "third fourth" "fifth fifth";
+                gap: 8px;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 22.4px;
+            }
+
+            & p:nth-child(1) {grid-area: first;}
+            & p:nth-child(2) {grid-area: second;}
+            & p:nth-child(3) {grid-area: third;}
+            & p:nth-child(4) {grid-area: fourth;}
+            & p:nth-child(5) {grid-area: fifth;}                               
+        }
+        &Subtitle {
+            display: flex;
+            gap: 8px;
+            align-items: end;
+            color: $primary-black-color;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 22.4px;
+            cursor: pointer;
+            transition: color .3s ease;
+            
+            @media (max-width:$smallTab) {
+                font-weight: 500;
+            }
+
+        }
+        &Subtitle svg {
+            transition: transform .3s ease;
+        }
+        &Subtitle path {
+            transition: stroke .3s ease;
+        }
+        &Subtitle:hover:not(:focus-visible) {
+            color: $yellow-color;
+        }
+        &Subtitle:focus-visible::after {
+            color: $yellow-color;
+        }
+        &Subtitle:active:not(:focus-visible) {
+            color: $yellow-color;
+        }
+        &Subtitle:hover:not(:focus-visible) svg{
+            transform: rotate(-180deg);
+        }
+        &Subtitle:focus-visible::after svg{
+            transform: rotate(-180deg);
+        }
+        &Subtitle:active:not(:focus-visible) svg{
+            transform: rotate(-180deg);
+        }
+        &Subtitle:hover:not(:focus-visible) path {
+            stroke: $yellow-color;
+        }
+        &Subtitle:focus-visible::after path {
+            stroke: $yellow-color;
+        }
+        &Subtitle:active:not(:focus-visible) path {
+            stroke: $yellow-color;
+        }
+
+        &ContentTwoCols {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: "first second" "third fourth" "fifth sixth" "seventh eighth";
+            color: $gray-color-2;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 30.8px;
+            
+            @media (max-width:$smallTab) {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 22.4px;
+            }
+            
+            & p:nth-child(1) {
+                grid-area: first;
+            }
+
+            & p:nth-child(2) {
+                grid-area: second;
+            }
+
+            & p:nth-child(3) {
+                grid-area: third;
+            }
+
+            & p:nth-child(4) {
+                grid-area: fourth;
+            }
+
+            & p:nth-child(5) {
+                grid-area: fifth;
+            }
+
+            & p:nth-child(6) {
+                grid-area: sixth;
+            }
+
+            & p:nth-child(7) {
+                grid-area: seventh;
+            }
+
+            & p:nth-child(8) {
+                grid-area: eighth;
+            }
+        }
+    }
+    
+    &__techReqOpen {
+        color: $yellow-color;
+
+        & svg {
+            transform: rotate(-180deg);
+        }
+
+        & path {
+            stroke: $yellow-color;
+        }
+    }
+
+    &__techReqContent {
+        display: flex;
+        gap: 16px;
+        color: $gray-color-2;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22.4px;
+
+        @media (max-width:$smallTab) {
+            gap: 8px;
+            flex-direction: column;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 15.6px;
+        }
+    }
+
+    &__techReqLeft, &__techReqRight {
+        flex: 1;
+    }
+
+    &__techReqLeft ul, &__techReqRight ul {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        list-style: disc;
+
+        @media (max-width:$smallTab) {
+            gap: 8px;
+        }
+
+    }
+
+    &__infoBoxLogos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 16px;
+    }
+
+    &__plant, &__executor {
+        height: 147px;
+        border-radius: 23.65px;
+        background-color: $white-color;
+        background-repeat: no-repeat;
+        background-position: center center;
+        @media (max-width:$smallTab) {
+            height: 64px;
+            border-radius: 10.949px;
+            background-size: 75%;
+        }
+
+    }
+
+
+}
