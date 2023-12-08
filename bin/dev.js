@@ -31,7 +31,7 @@ hmrServer.use(webpackHotMiddleware(clientCompiler, {
 // запускаем сервер
 const PORT_HMR =
   process.env.PORT_HMR === "undefined" || process.env.PORT_HMR === undefined
-    ? 3001
+    ? 4001
     : process.env.PORT_HMR;
 hmrServer.listen(PORT_HMR, () => {
     console.log(`[dev.js]: сервер HMR успешно запушен на порту ${PORT_HMR}`);
