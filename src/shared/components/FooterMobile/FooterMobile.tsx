@@ -1,16 +1,9 @@
 import React from 'react';
 import { Icon } from '../icons/Icon/Icon';
+import { EIcon } from '../icons/enums';
 import styles from './footermobile.scss';
 
 export function FooterMobile() {
-  enum EIcon {
-    footerMobileCatalogIcon = 'footerMobileCatalogIcon',
-    footerMobileCartIcon = 'footerMobileCartIcon',
-    footerMobileRequestsIcon = 'footerMobileRequestsIcon',
-    footerMobileChatsIcon = 'footerMobileChatsIcon',
-    footerMobileLkIcon = 'footerMobileLkIcon'
-  }
-
   return (
     <footer className={styles.footer}>
       <div className={`${styles.containerFluid} ${styles.footer__container}`}>

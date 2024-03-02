@@ -2,6 +2,7 @@ import feedbackFormBg from 'Assets/feedback_form_bg.png';
 import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Icon } from '../icons/Icon/Icon';
+import { EIcon } from '../icons/enums';
 import styles from './feedback.scss';
 
 export function Feedback() {
@@ -25,16 +26,6 @@ export function Feedback() {
   //
   const [firstSubmit, setFirstSubmit] = useState(false);
   const [contactErrorMsg, setContactErrorMsg] = useState('');
-
-  enum EIcon {
-    feedbackAttachFileIcon = 'feedbackAttachFileIcon',
-    communicationMethodCallIcon = 'communicationMethodCallIcon',
-    communicationMethodEmailIcon = 'communicationMethodEmailIcon',
-    communicationMethodTelegramIcon = 'communicationMethodTelegramIcon',
-    communicationMethodWhatsappIcon = 'communicationMethodWhatsappIcon',
-    feedbackSubmitBtnIcon = 'feedbackSubmitBtnIcon',
-    attachedFileDelete = 'attachedFileDelete'
-  }
 
   const isMobile = useMediaQuery({ query: '(max-width: 1000px)' })
   const formBg = !isMobile ? {backgroundImage: `url(${feedbackFormBg})`} : {backgroundImage: 'none'}

@@ -6,16 +6,10 @@ import yookassaLogo from 'Assets/yookassa_logo.png';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from '../icons/Icon/Icon';
+import { EIcon } from '../icons/enums';
 import styles from './footerdesktop.scss';
 
-export function FooterDesktop() {
-  
-  enum EIcon {
-    footerPhoneIcon = 'footerPhoneIcon',
-    footerEmailIcon = 'footerEmailIcon',
-    footerChatIcon = 'footerChatIcon'
-  }
-  
+export function FooterDesktop() {  
   return (
     <footer className={styles.footer}>
       <div className={`${styles.containerFluid} ${styles.footer__container}`}>

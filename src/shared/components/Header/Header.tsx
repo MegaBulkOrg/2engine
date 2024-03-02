@@ -2,22 +2,11 @@ import logo from 'Assets/logo.png';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from '../icons/Icon/Icon';
+import { EIcon } from '../icons/enums';
 import styles from './header.scss';
 
 export function Header() {
   const [burgerMenuOpen, setBurgerMenuOpen] = useState(false);
-
-  enum EIcon {
-    headerCatalogBtnLeftIcon = 'headerCatalogBtnLeftIcon',
-    headerCatalogBtnRightIcon = 'headerCatalogBtnRightIcon',
-    headerMapIcon = 'headerMapIcon',
-    headerOpenIcon = 'headerOpenIcon',
-    headerTelegramIcon = 'headerTelegramIcon',
-    headerChatsIcon = 'headerChatsIcon',
-    headerFavoritesIcon = 'headerFavoritesIcon',
-    headerCartIcon = 'headerCartIcon',
-    headerLkIcon = 'headerLkIcon'
-  }
   
   function openBurgerMenu() {
     setBurgerMenuOpen(!burgerMenuOpen);

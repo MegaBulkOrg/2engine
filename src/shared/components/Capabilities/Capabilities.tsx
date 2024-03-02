@@ -7,13 +7,11 @@ import plant_5_logo from 'Assets/plant_5.jpg';
 import plant_6_logo from 'Assets/plant_6.jpg';
 import React, { useState } from 'react';
 import { Icon } from '../icons/Icon/Icon';
+import { EIcon } from '../icons/enums';
 import styles from './capabilities.scss';
+
 export function Capabilities() {
   const [techReqOpen, setTechReqOpen] = useState(false);
-
-  enum EIcon {
-    openTechReqIcon = 'openTechReqIcon'
-  }
 
   function openTechReq() {
     setTechReqOpen(!techReqOpen);
